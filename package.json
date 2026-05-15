@@ -1,0 +1,32 @@
+{
+  "name": "com.google.xr.interaction-framework",
+  "displayName": "Android XR Interaction Framework",
+  "description": "Interaction framework for Android XR applications",
+  "version": "0.9.0-pre.1",
+  "unity": "6000.3",
+  "unityRelease": "12f1",
+  "documentationUrl": "https://developer.android.com/xr/axrif",
+  "author": {
+    "name": "Google LLC"
+  },
+  "keywords": [
+    "Google",
+    "AndroidXR",
+    "Interaction",
+    "Framework",
+    "AXRIF"
+  ],
+  "samples": [
+    {
+      "displayName": "Axrif Sample",
+      "description": "A sample scene showing the functionality of the Android XR Interaction Framework in Unity. This requires the XR Interaction Toolkit Starter Assets and Hand Interaction Demo samples to be added to the project.",
+      "path": "Samples~/AxrifDemoScene"
+    }
+  ],
+  "dependencies": {
+    "com.unity.xr.interaction.toolkit": "3.3.1",
+    "com.unity.xr.openxr": "1.17.0",
+    "com.unity.xr.androidxr-openxr": "1.3.0",
+    "com.google.xr.extensions": "1.3.0"
+  }
+}

@@ -1,0 +1,134 @@
+// Copyright 2025 Google LLC
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     https://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+Shader "AndroidXR/Unlit_Hand"
+{
+    Properties
+    {
+        [Header(HandVisD)]
+        _Offset("Offset", Float) = 0.001
+        _ZFade("ZFade", Vector) = (0.01,-0.02,0,0)
+        
+        [Header(Config)]
+        [Enum(UnityEngine.Rendering.CullMode)] _Culling("Culling", Float) = 2
+        [Toggle] _ZWrite ("ZWrite", Float) = 1
+        [Enum(UnityEngine.Rendering.CompareFunction)] _ZTest("ZTest", Float) = 4
+    	[Enum(UnityEngine.Rendering.BlendOp)] _ColorBlendOp ("ColorBlendOp", Float) = 0.0
+    	[Enum(UnityEngine.Rendering.BlendMode)] _SrcBlend ("SrcColorBlend", Float) = 1.0
+    	[Enum(UnityEngine.Rendering.BlendMode)] _DstBlend ("DstColorBlend", Float) = 0.0
+        [Enum(UnityEngine.Rendering.BlendOp)] _AlphaBlendOp ("AlphaBlendOp", Float) = 0.0
+        [Enum(UnityEngine.Rendering.BlendMode)] _SrcBlendAlpha ("SrcAlphaBlend", Float) = 1.0
+        [Enum(UnityEngine.Rendering.BlendMode)] _DstBlendAlpha ("DstAlphaBlend", Float) = 0.0
+
+        [Header(Stencil)]
+        [IntRange] _StencilRef ("Stencil Reference Value", Range(0,255)) = 0
+        [Enum(UnityEngine.Rendering.CompareFunction)] _StencilComp("Stencil Comp", Float) = 8
+        [Enum(UnityEngine.Rendering.StencilOp)] _StencilPassOp("Stencil Op", Float) = 0
+        
+        [Header(Properties)]
+        [Toggle(VERTEX_COLOR)] _VertexColor ("Use Vertex Color", Float) = 0
+        [HDR]_Color ("Main Color", Color) = (1,1,1,1)
+        _AlphaMultiplier ("Alpha Multiplier", Float) = 1
+        _MainTex ("Main Texture", 2D) = "white" {}
+    }
+    SubShader
+    {
+        Pass
+        {
+            ZWrite [_ZWrite]
+            ZTest [_ZTest]
+            Cull [_Culling]
+            BlendOp [_ColorBlendOp], [_AlphaBlendOp]
+            Blend [_SrcBlend] [_DstBlend], [_SrcBlendAlpha] [_DstBlendAlpha]
+            
+            Stencil
+            {
+                Ref [_StencilRef]
+                Comp [_StencilComp]
+                Pass [_StencilPassOp]
+            }
+
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+
+            #include "UnityCG.cginc"
+            #pragma shader_feature ALPHA_CLIP
+            #pragma shader_feature VERTEX_COLOR
+
+            struct appdata
+            {
+                float4 vertex : POSITION;
+                float2 uv : TEXCOORD0;
+                float3 normal: NORMAL;
+                fixed4 color : COLOR;
+                UNITY_VERTEX_INPUT_INSTANCE_ID
+            };
+
+            struct v2f
+            {
+                float2 uv : TEXCOORD0;
+                float4 vertex : SV_POSITION;
+                float3 objectPos : TEXCOORD1;
+                float4 worldPos : TEXCOORD2;
+                fixed4 color : COLOR;
+                UNITY_VERTEX_OUTPUT_STEREO
+            };
+
+            sampler2D _MainTex;
+            fixed4 _MainTex_ST;
+            fixed4 _Color;
+            fixed _AlphaMultiplier;
+            float _Offset;
+            float2 _ZFade;
+            float4x4 _FadeTransform = {
+                1, 0, 0, 0,
+                0, 1, 0, 0,
+                0, 0, 1, 0,
+                0, 0, 0, 1
+            };
+
+            v2f vert(appdata v)
+            {
+                v2f o;
+                UNITY_SETUP_INSTANCE_ID(v);
+                UNITY_INITIALIZE_OUTPUT(v2f, o);
+                UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
+
+                o.objectPos = v.vertex + v.normal * _Offset;
+                o.worldPos = mul(unity_ObjectToWorld, float4(o.objectPos,1));
+                o.vertex = UnityObjectToClipPos(o.objectPos);
+                o.uv = TRANSFORM_TEX(v.uv, _MainTex);
+                o.color = v.color;
+                return o;
+            }
+
+            fixed4 frag(v2f i) : SV_Target
+            {
+                UNITY_SETUP_STEREO_EYE_INDEX_POST_VERTEX(i);
+                
+                fixed4 col = tex2D(_MainTex, i.uv);
+                col = col * _Color;
+                #ifdef  VERTEX_COLOR
+                col *= i.color;
+                #endif
+                float zFade = smoothstep(_ZFade.x, _ZFade.y, mul(_FadeTransform, i.worldPos).z);
+                
+                col.a *= (_AlphaMultiplier * zFade);
+                //clip(col.a - 0.004);
+                return col;
+            }
+            ENDCG
+        }
+    }
+}

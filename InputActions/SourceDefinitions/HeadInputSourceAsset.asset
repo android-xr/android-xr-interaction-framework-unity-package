@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07dec65347b68486d959fcf86e2816ca, type: 3}
+  m_Name: HeadInputSourceAsset
+  m_EditorClassIdentifier: AndroidXRInteractionFramework::Android.XR.InteractionFramework.AxrifHeadSourceAsset
+  HeadPoseTrackingState:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Head Pose Tracking State
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: d07c7c89-b2bb-4eed-a7f8-7981e8958792
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 1031966339891076899, guid: 00857e33a155a40d3a4054ec862a72e9, type: 3}
+  HeadActions:
+    position:
+      m_UseReference: 1
+      m_Action:
+        m_Name: Position
+        m_Type: 0
+        m_ExpectedControlType: 
+        m_Id: af5ebfa3-7141-4f55-8214-4a3aa5366425
+        m_Processors: 
+        m_Interactions: 
+        m_SingletonActionBindings: []
+        m_Flags: 0
+      m_Reference: {fileID: 7862207684358717888, guid: 00857e33a155a40d3a4054ec862a72e9, type: 3}
+    rotation:
+      m_UseReference: 1
+      m_Action:
+        m_Name: Rotation
+        m_Type: 0
+        m_ExpectedControlType: 
+        m_Id: 6586f6db-b5d1-4e52-b672-23e053324815
+        m_Processors: 
+        m_Interactions: 
+        m_SingletonActionBindings: []
+        m_Flags: 0
+      m_Reference: {fileID: -530380113134220495, guid: 00857e33a155a40d3a4054ec862a72e9, type: 3}

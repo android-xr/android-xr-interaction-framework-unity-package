@@ -1,0 +1,28 @@
+{
+    "name": "AndroidXRInteractionFramework.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:f9fe0089ec81f4079af78eb2287a6163",
+        "GUID:96aa6ba065960476598f8f643e7252b6",
+        "GUID:4847341ff46394e83bb78fbd0652937e",
+        "GUID:ce522b6ed64c8be4c989a1d26d0e3275",
+        "GUID:7c70ef3a57ac56a78af167963d9c6bef"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.xr.hands",
+            "expression": "",
+            "define": "XR_HANDS"
+        }
+    ],
+    "noEngineReferences": false
+}

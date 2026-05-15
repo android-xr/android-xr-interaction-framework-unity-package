@@ -1,0 +1,210 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d4277ac1c04b43a185c200e931ac082, type: 3}
+  m_Name: TouchControllerInputSourceAsset
+  m_EditorClassIdentifier: AndroidXRInteractionFramework::Android.XR.InteractionFramework.AxrifControllerSourceAsset
+  LeftControllerActions:
+    trackingState:
+      m_UseReference: 1
+      m_Action:
+        m_Name: Tracking State
+        m_Type: 0
+        m_ExpectedControlType: 
+        m_Id: 050dcf9d-4be8-4cc3-b8fb-b2fede41c3fd
+        m_Processors: 
+        m_Interactions: 
+        m_SingletonActionBindings: []
+        m_Flags: 0
+      m_Reference: {fileID: -6139490597343878727, guid: 00857e33a155a40d3a4054ec862a72e9, type: 3}
+    aimPose:
+      position:
+        m_UseReference: 1
+        m_Action:
+          m_Name: Position
+          m_Type: 0
+          m_ExpectedControlType: 
+          m_Id: b8e9641c-4732-4608-a540-f2cb55198332
+          m_Processors: 
+          m_Interactions: 
+          m_SingletonActionBindings: []
+          m_Flags: 0
+        m_Reference: {fileID: 4878392267754386999, guid: 00857e33a155a40d3a4054ec862a72e9, type: 3}
+      rotation:
+        m_UseReference: 1
+        m_Action:
+          m_Name: Rotation
+          m_Type: 0
+          m_ExpectedControlType: 
+          m_Id: 6887a647-29a2-4bd4-ac8f-f6e17d40ca44
+          m_Processors: 
+          m_Interactions: 
+          m_SingletonActionBindings: []
+          m_Flags: 0
+        m_Reference: {fileID: -5013896203065809492, guid: 00857e33a155a40d3a4054ec862a72e9, type: 3}
+    primary:
+      m_UseReference: 1
+      m_Action:
+        m_Name: Primary
+        m_Type: 0
+        m_ExpectedControlType: 
+        m_Id: 9fc75d07-6a21-4766-83f1-627e9f97caea
+        m_Processors: 
+        m_Interactions: 
+        m_SingletonActionBindings: []
+        m_Flags: 0
+      m_Reference: {fileID: -8523657892994835401, guid: 00857e33a155a40d3a4054ec862a72e9, type: 3}
+    secondary:
+      m_UseReference: 1
+      m_Action:
+        m_Name: Secondary
+        m_Type: 0
+        m_ExpectedControlType: 
+        m_Id: 00d8e655-f322-4d7b-ad17-217ecd0b8f65
+        m_Processors: 
+        m_Interactions: 
+        m_SingletonActionBindings: []
+        m_Flags: 0
+      m_Reference: {fileID: 2871045843861424168, guid: 00857e33a155a40d3a4054ec862a72e9, type: 3}
+    trigger:
+      m_UseReference: 1
+      m_Action:
+        m_Name: Trigger
+        m_Type: 0
+        m_ExpectedControlType: 
+        m_Id: f5e02ff8-3a8f-4c3d-a405-7e26a456d780
+        m_Processors: 
+        m_Interactions: 
+        m_SingletonActionBindings: []
+        m_Flags: 0
+      m_Reference: {fileID: 655546558649417356, guid: 00857e33a155a40d3a4054ec862a72e9, type: 3}
+    thumbstick:
+      m_UseReference: 1
+      m_Action:
+        m_Name: Thumbstick
+        m_Type: 0
+        m_ExpectedControlType: 
+        m_Id: 78422d94-7f6f-46c3-9378-d238b3f95670
+        m_Processors: 
+        m_Interactions: 
+        m_SingletonActionBindings: []
+        m_Flags: 0
+      m_Reference: {fileID: -8253949163954608792, guid: 00857e33a155a40d3a4054ec862a72e9, type: 3}
+    thumbstickPress:
+      m_UseReference: 1
+      m_Action:
+        m_Name: Thumbstick Press
+        m_Type: 0
+        m_ExpectedControlType: 
+        m_Id: 34032777-0dbd-4d01-be5d-5be8c48063ad
+        m_Processors: 
+        m_Interactions: 
+        m_SingletonActionBindings: []
+        m_Flags: 0
+      m_Reference: {fileID: 3381038552222483233, guid: 00857e33a155a40d3a4054ec862a72e9, type: 3}
+  RightControllerActions:
+    trackingState:
+      m_UseReference: 1
+      m_Action:
+        m_Name: Tracking State
+        m_Type: 0
+        m_ExpectedControlType: 
+        m_Id: da8d38b7-1856-4d41-b482-b96de4fd76f6
+        m_Processors: 
+        m_Interactions: 
+        m_SingletonActionBindings: []
+        m_Flags: 0
+      m_Reference: {fileID: -7368552985348041498, guid: 00857e33a155a40d3a4054ec862a72e9, type: 3}
+    aimPose:
+      position:
+        m_UseReference: 1
+        m_Action:
+          m_Name: Position
+          m_Type: 0
+          m_ExpectedControlType: 
+          m_Id: 235ba59c-076a-432a-9fe8-f8e54a089a03
+          m_Processors: 
+          m_Interactions: 
+          m_SingletonActionBindings: []
+          m_Flags: 0
+        m_Reference: {fileID: -2985765400056574656, guid: 00857e33a155a40d3a4054ec862a72e9, type: 3}
+      rotation:
+        m_UseReference: 1
+        m_Action:
+          m_Name: Rotation
+          m_Type: 0
+          m_ExpectedControlType: 
+          m_Id: e3ed698f-52e6-4658-81a3-a4d7c9a5f0a3
+          m_Processors: 
+          m_Interactions: 
+          m_SingletonActionBindings: []
+          m_Flags: 0
+        m_Reference: {fileID: -1194022815402257745, guid: 00857e33a155a40d3a4054ec862a72e9, type: 3}
+    primary:
+      m_UseReference: 1
+      m_Action:
+        m_Name: Primary
+        m_Type: 0
+        m_ExpectedControlType: 
+        m_Id: 35839cdc-9a5b-4218-a7ac-f64b32e0ff76
+        m_Processors: 
+        m_Interactions: 
+        m_SingletonActionBindings: []
+        m_Flags: 0
+      m_Reference: {fileID: -4977009195575098102, guid: 00857e33a155a40d3a4054ec862a72e9, type: 3}
+    secondary:
+      m_UseReference: 1
+      m_Action:
+        m_Name: Secondary
+        m_Type: 0
+        m_ExpectedControlType: 
+        m_Id: ba07db8b-536f-4505-94f1-bd64a7f22e11
+        m_Processors: 
+        m_Interactions: 
+        m_SingletonActionBindings: []
+        m_Flags: 0
+      m_Reference: {fileID: 7292940765995110553, guid: 00857e33a155a40d3a4054ec862a72e9, type: 3}
+    trigger:
+      m_UseReference: 1
+      m_Action:
+        m_Name: Trigger
+        m_Type: 0
+        m_ExpectedControlType: 
+        m_Id: 582bd1f5-645e-4db5-8897-ea8e8a134b41
+        m_Processors: 
+        m_Interactions: 
+        m_SingletonActionBindings: []
+        m_Flags: 0
+      m_Reference: {fileID: 4814908360451598572, guid: 00857e33a155a40d3a4054ec862a72e9, type: 3}
+    thumbstick:
+      m_UseReference: 1
+      m_Action:
+        m_Name: Thumbstick
+        m_Type: 0
+        m_ExpectedControlType: 
+        m_Id: 3d69fff3-07d5-4c57-b5c7-8621e3b85a46
+        m_Processors: 
+        m_Interactions: 
+        m_SingletonActionBindings: []
+        m_Flags: 0
+      m_Reference: {fileID: -2716137073371816951, guid: 00857e33a155a40d3a4054ec862a72e9, type: 3}
+    thumbstickPress:
+      m_UseReference: 1
+      m_Action:
+        m_Name: Thumbstick Press
+        m_Type: 0
+        m_ExpectedControlType: 
+        m_Id: 331c3be0-6a93-46c7-95c1-6655cce24dff
+        m_Processors: 
+        m_Interactions: 
+        m_SingletonActionBindings: []
+        m_Flags: 0
+      m_Reference: {fileID: -3493284935834939833, guid: 00857e33a155a40d3a4054ec862a72e9, type: 3}

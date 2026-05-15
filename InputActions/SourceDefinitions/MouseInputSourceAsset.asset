@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0f88dd3b060c4139b6486124b012681, type: 3}
+  m_Name: MouseInputSourceAsset
+  m_EditorClassIdentifier: AndroidXRInteractionFramework::Android.XR.InteractionFramework.AxrifMouseSourceAsset
+  MouseActions:
+    trackingState:
+      m_UseReference: 1
+      m_Action:
+        m_Name: Tracking State
+        m_Type: 0
+        m_ExpectedControlType: 
+        m_Id: f1e6a5bf-0508-4e72-83e9-86ff0691a765
+        m_Processors: 
+        m_Interactions: 
+        m_SingletonActionBindings: []
+        m_Flags: 0
+      m_Reference: {fileID: 3193380166266467385, guid: 00857e33a155a40d3a4054ec862a72e9, type: 3}
+    pose:
+      m_UseReference: 1
+      m_Action:
+        m_Name: Pose
+        m_Type: 0
+        m_ExpectedControlType: 
+        m_Id: 75d6b646-7d63-43f1-bce1-ecd8cd477d7b
+        m_Processors: 
+        m_Interactions: 
+        m_SingletonActionBindings: []
+        m_Flags: 0
+      m_Reference: {fileID: -2986779414846234884, guid: 00857e33a155a40d3a4054ec862a72e9, type: 3}
+    primaryClick:
+      m_UseReference: 1
+      m_Action:
+        m_Name: Primary Click
+        m_Type: 0
+        m_ExpectedControlType: 
+        m_Id: 98b7720f-6ec0-4e72-bcdc-260362a940cd
+        m_Processors: 
+        m_Interactions: 
+        m_SingletonActionBindings: []
+        m_Flags: 0
+      m_Reference: {fileID: -9008672198259066386, guid: 00857e33a155a40d3a4054ec862a72e9, type: 3}
+    secondaryClick:
+      m_UseReference: 1
+      m_Action:
+        m_Name: Secondary Click
+        m_Type: 0
+        m_ExpectedControlType: 
+        m_Id: cf740a8b-956d-412e-93c9-4e0ec093765a
+        m_Processors: 
+        m_Interactions: 
+        m_SingletonActionBindings: []
+        m_Flags: 0
+      m_Reference: {fileID: -5650187300849657047, guid: 00857e33a155a40d3a4054ec862a72e9, type: 3}
+    tertiaryClick:
+      m_UseReference: 1
+      m_Action:
+        m_Name: Tertiary Click
+        m_Type: 0
+        m_ExpectedControlType: 
+        m_Id: 25060e88-838e-4979-8aeb-1196640432cc
+        m_Processors: 
+        m_Interactions: 
+        m_SingletonActionBindings: []
+        m_Flags: 0
+      m_Reference: {fileID: -6532598269933150210, guid: 00857e33a155a40d3a4054ec862a72e9, type: 3}
+    scroll:
+      m_UseReference: 1
+      m_Action:
+        m_Name: Scroll
+        m_Type: 0
+        m_ExpectedControlType: 
+        m_Id: 29bceb8b-6dc9-4205-9758-897e074acbf4
+        m_Processors: 
+        m_Interactions: 
+        m_SingletonActionBindings: []
+        m_Flags: 0
+      m_Reference: {fileID: 8310116824879232225, guid: 00857e33a155a40d3a4054ec862a72e9, type: 3}

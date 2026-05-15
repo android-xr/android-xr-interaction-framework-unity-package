@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1668088097076305833
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4666106083719543035}
+  - component: {fileID: 8254776286216152484}
+  - component: {fileID: 4181110836721507900}
+  - component: {fileID: 5296937256760625807}
+  - component: {fileID: 7665394355739091779}
+  m_Layer: 0
+  m_Name: Axrif Interaction Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4666106083719543035
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1668088097076305833}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8254776286216152484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1668088097076305833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83e4e6cca11330d4088d729ab4fc9d9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StartingHoverFilters: []
+  m_StartingSelectFilters: []
+--- !u!114 &4181110836721507900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1668088097076305833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a45760f97c10a6aaf993d5a1cfdb54ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  configurations:
+    IsControllerEnabled: 1
+    IsGazePinchEnabled: 1
+    UseHeadForGazeInteraction: 0
+    IsHandRaycastEnabled: 1
+    IsHandPokeEnabled: 1
+    IsMouseEnabled: 1
+    UseSensitiveTransitions: 1
+  _onInputModeChangedLeft:
+    m_PersistentCalls:
+      m_Calls: []
+  _onInputModeChangedRight:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &5296937256760625807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1668088097076305833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc4d4ca28cbfe4f3c9aabd6a1379c1aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AndroidXRInteractionFramework::Android.XR.InteractionFramework.AxrifInputAdapter
+  _handSourceAsset: {fileID: 11400000, guid: 8047c8de410a445ff856937d86ca9985, type: 2}
+  _headSourceAsset: {fileID: 11400000, guid: e30fc6ff065f5471aa7bea26d9cbf005, type: 2}
+  _eyeSourceAsset: {fileID: 11400000, guid: 1f7d0d6361235413ab8964595f39f54b, type: 2}
+  _mouseSourceAsset: {fileID: 11400000, guid: a4e3575fdf7e94bfbb047e765412edbb, type: 2}
+  _controllerSourceAsset: {fileID: 11400000, guid: fa9d594038f074d11b619225ada5bbb4, type: 2}
+--- !u!114 &7665394355739091779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1668088097076305833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9ed97ae0ed3f4599b60f58f73f5437e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AndroidXRInteractionFramework::Android.XR.InteractionFramework.AxrifSceneIntegrator
+  _useCanvasTagForPoke: 1
+  _canvasPokeTag: IsAxrifPokeCompatible
