@@ -29,4 +29,4 @@ To ensure maximum performance and cross-engine compatibility, AXRIF is split int
 
 ## How To Use:
 
-The AXRIF Unity Plugin integrates directly with Unity's XR Interaction Toolkit (XRI) to maximize compatibility with the input systems you are already familiar with. To get started, please follow the [Unity Setup Guide](https://developer.android.com/develop/xr/axrif) to add the package to your app.
+The AXRIF Unity Plugin integrates directly with Unity's XR Interaction Toolkit (XRI) to maximize compatibility with the input systems you are already familiar with. To get started, please follow the [Unity Setup Guide](https://developer.android.com/develop/xr/unity/interaction-framework) to add the package to your app.
