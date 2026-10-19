@@ -20,8 +20,14 @@ using UnityEngine.XR.OpenXR;
 
 namespace Android.XR.InteractionFramework.Editor {
   public class AxrifGlobalBuildHook : IAndroidManifestRequirementProvider {
+    private ManifestRequirement _cachedManifestRequirement;
+
     public ManifestRequirement ProvideManifestRequirement() {
-      var manifestRequirement = new ManifestRequirement {
+      if (_cachedManifestRequirement != null) {
+        return _cachedManifestRequirement;
+      }
+
+      _cachedManifestRequirement = new ManifestRequirement {
         SupportedXRLoaders = new HashSet<Type>() { typeof(OpenXRLoader) },
 
         NewElements =
@@ -46,7 +52,7 @@ namespace Android.XR.InteractionFramework.Editor {
             },
       };
 
-      return manifestRequirement;
+      return _cachedManifestRequirement;
     }
   }
 }  // namespace Android.XR.InteractionFramework.Editor

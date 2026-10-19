@@ -115,10 +115,25 @@ namespace Android.XR.InteractionFramework {
     /// </summary>
     public AxrifPointerActivationFlagType ActivationFlags;
 
+    /// <summary>
+    /// The scaling ratio for pointers that support scaling (e.g. GazePinch with
+    /// both hands). A value of 1.0 indicates no scaling. Greater values indicate
+    /// an increase in scaling, and smaller values indicate a decrease in scaling.
+    /// </summary>
+    public float ScaleRatio;
+
+    /// <summary>
+    /// The rotation angle in radians around the pointer axis for pointers that
+    /// support rotation (e.g. GazePinch with both hands), relative to the initial
+    /// angle when the rotation began.
+    /// </summary>
+    public float RotationValue;
+
     public override string ToString() {
       return $"IsActive = {IsActive} - " + $"Type = {Type} - " + $"Handedness = {Handedness} - " +
              $"Line = {Line} - " + $"ActivationAmount = {ActivationAmount} - " +
-             $"ActivationFlags = {ActivationFlags}";
+             $"ActivationFlags = {ActivationFlags}" + $"ScaleRatio = {ScaleRatio}" +
+             $"RotationValue = {RotationValue}";
     }
   }
 }  // namespace Android.XR.InteractionFramework

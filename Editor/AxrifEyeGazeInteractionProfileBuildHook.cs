@@ -23,6 +23,8 @@ using UnityEngine.XR.OpenXR.Features.Interactions;
 
 namespace Android.XR.InteractionFramework.Editor {
   public class AxrifEyeGazeInteractionProfileBuildHook : OpenXRFeatureBuildHooks {
+    private ManifestRequirement _cachedManifestRequirement;
+
     public override int callbackOrder => 0;
     public override Type featureType => typeof(EyeGazeInteraction);
 
@@ -39,7 +41,11 @@ namespace Android.XR.InteractionFramework.Editor {
     }
 
     protected override ManifestRequirement ProvideManifestRequirementExt() {
-      var manifestRequirement = new ManifestRequirement {
+      if (_cachedManifestRequirement != null) {
+        return _cachedManifestRequirement;
+      }
+
+      _cachedManifestRequirement = new ManifestRequirement {
         SupportedXRLoaders = new HashSet<Type>() { typeof(OpenXRLoader) },
         NewElements =
             new List<ManifestElement>() {
@@ -53,7 +59,7 @@ namespace Android.XR.InteractionFramework.Editor {
             }
       };
 
-      return manifestRequirement;
+      return _cachedManifestRequirement;
     }
   }
 }  // namespace Android.XR.InteractionFramework.Editor

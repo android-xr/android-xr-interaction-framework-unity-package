@@ -24,6 +24,8 @@ using HandTrackingFeature = UnityEngine.XR.Hands.OpenXR.HandTracking;
 
 namespace Android.XR.InteractionFramework.Editor {
   public class AxrifHandTrackingFeatureBuildHook : OpenXRFeatureBuildHooks {
+    private ManifestRequirement _cachedManifestRequirement;
+
     public override int callbackOrder => 0;
     public override Type featureType => typeof(HandTrackingFeature);
 
@@ -40,7 +42,11 @@ namespace Android.XR.InteractionFramework.Editor {
     }
 
     protected override ManifestRequirement ProvideManifestRequirementExt() {
-      var manifestRequirement = new ManifestRequirement {
+      if (_cachedManifestRequirement != null) {
+        return _cachedManifestRequirement;
+      }
+
+      _cachedManifestRequirement = new ManifestRequirement {
         SupportedXRLoaders = new HashSet<Type>() { typeof(OpenXRLoader) },
         NewElements =
             new List<ManifestElement>() {
@@ -54,7 +60,7 @@ namespace Android.XR.InteractionFramework.Editor {
             }
       };
 
-      return manifestRequirement;
+      return _cachedManifestRequirement;
     }
   }
 }  // namespace Android.XR.InteractionFramework.Editor

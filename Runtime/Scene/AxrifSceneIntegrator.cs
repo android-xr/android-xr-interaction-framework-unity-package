@@ -137,7 +137,8 @@ namespace Android.XR.InteractionFramework {
       bool isTouchable = pokeFilter != null;
       if (collider.TryToAxrifCollider(id, out Collider axrifCollider, isTouchable)) {
         if (SetCollider(axrifCollider)) {
-          _trackedColliders.Add(AxrifTrackedCollider.GetTrackedCollider(id, collider, isTouchable));
+          _trackedColliders.Add(
+            AxrifTrackedCollider.GetTrackedCollider(id, collider, isTouchable));
           return true;
         }
       }
@@ -173,7 +174,8 @@ namespace Android.XR.InteractionFramework {
       int id = rect.GetInstanceID();
       bool isTouchable = _useCanvasTagForPoke ? rect.gameObject.CompareTag(_canvasPokeTag) : true;
       if (SetCollider(rect.ToAxrifCollider(id, isTouchable))) {
-        _trackedColliders.Add(AxrifTrackedCollider.GetTrackedCollider(id, rect, isTouchable));
+        _trackedColliders.Add(
+          AxrifTrackedCollider.GetTrackedCollider(id, rect, isTouchable));
         return true;
       }
       return false;

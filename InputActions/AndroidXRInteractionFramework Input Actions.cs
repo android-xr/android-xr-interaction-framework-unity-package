@@ -3719,7 +3719,7 @@ namespace Android.XR.InteractionFramework
                 {
                     ""name"": """",
                     ""id"": ""5f91b010-998c-438e-80d8-ca79e2329e15"",
-                    ""path"": ""<AndroidXRMouse>/pose/isTracked"",
+                    ""path"": ""<AndroidMouseInteraction>/aim/isTracked"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -3730,7 +3730,7 @@ namespace Android.XR.InteractionFramework
                 {
                     ""name"": """",
                     ""id"": ""7023512a-0337-4490-a308-45c715ac635f"",
-                    ""path"": ""<AndroidXRMouse>/primaryButton"",
+                    ""path"": ""<AndroidMouseInteraction>/click"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -3741,7 +3741,7 @@ namespace Android.XR.InteractionFramework
                 {
                     ""name"": """",
                     ""id"": ""8812dbcd-c24c-47de-ac65-e71c603a79d4"",
-                    ""path"": ""<AndroidXRMouse>/secondaryButton"",
+                    ""path"": ""<AndroidMouseInteraction>/secondaryClick"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -3752,7 +3752,7 @@ namespace Android.XR.InteractionFramework
                 {
                     ""name"": """",
                     ""id"": ""b3d8654c-bc5f-404d-b7b1-75b545229b45"",
-                    ""path"": ""<AndroidXRMouse>/tertiaryButton"",
+                    ""path"": ""<AndroidMouseInteraction>/tertiaryClick"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -3763,7 +3763,7 @@ namespace Android.XR.InteractionFramework
                 {
                     ""name"": """",
                     ""id"": ""bbf52a6b-6ec7-446a-885d-6d18b03ad70f"",
-                    ""path"": ""<AndroidXRMouse>/scroll"",
+                    ""path"": ""<AndroidMouseInteraction>/scroll"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -3774,7 +3774,7 @@ namespace Android.XR.InteractionFramework
                 {
                     ""name"": """",
                     ""id"": ""735fb52f-15d1-4e0d-86ca-b19b15d60f56"",
-                    ""path"": ""<AndroidXRMouse>/pose"",
+                    ""path"": ""<AndroidMouseInteraction>/aim"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -3785,7 +3785,7 @@ namespace Android.XR.InteractionFramework
                 {
                     ""name"": """",
                     ""id"": ""0ff4a42c-04dc-4aeb-aeb8-5ef538626130"",
-                    ""path"": ""<AndroidXRMouse>/trackingState"",
+                    ""path"": ""<AndroidMouseInteraction>/trackingState"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",

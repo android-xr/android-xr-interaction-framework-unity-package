@@ -64,5 +64,12 @@ namespace Android.XR.InteractionFramework {
     /// direction.
     /// </summary>
     public float HorizontalScrollValue;
+
+    /// <summary>
+    /// Indicates whether an explicit action other than clicking or scrolling is
+    /// occurring. This is applicable to specialty mouse hardware or trackpad
+    /// devices.
+    /// </summary>
+    public bool IsAncillaryActionActive;
   }
 }  // namespace Android.XR.InteractionFramework

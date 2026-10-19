@@ -2,7 +2,7 @@
   "name": "com.google.xr.interaction-framework",
   "displayName": "Android XR Interaction Framework",
   "description": "Interaction framework for Android XR applications",
-  "version": "0.9.0-pre.1",
+  "version": "0.9.1-pre.1",
   "unity": "6000.3",
   "unityRelease": "12f1",
   "documentationUrl": "https://developer.android.com/xr/axrif",
@@ -24,9 +24,10 @@
     }
   ],
   "dependencies": {
-    "com.unity.xr.interaction.toolkit": "3.3.1",
-    "com.unity.xr.openxr": "1.17.0",
+    "com.google.xr.extensions": "1.4.0",
+    "com.unity.visualscripting": "1.9.11",
     "com.unity.xr.androidxr-openxr": "1.3.0",
-    "com.google.xr.extensions": "1.3.0"
+    "com.unity.xr.interaction.toolkit": "3.3.2",
+    "com.unity.xr.openxr": "1.17.0"
   }
 }
